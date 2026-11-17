@@ -12,6 +12,7 @@
 \s+                                                               /* skip whitespace */
 
 [$][{](.+?)[}]                                                    return 'PLACE_HOLDER'
+[?]                                                                return 'PLACE_HOLDER'
 [`][a-zA-Z0-9_\u0080-\uFFFF]*[`]                                  return 'IDENTIFIER'
 [\w]+[\u0080-\uFFFF]+[0-9a-zA-Z_\u0080-\uFFFF]*                   return 'IDENTIFIER'
 [\u0080-\uFFFF][0-9a-zA-Z_\u0080-\uFFFF]*                         return 'IDENTIFIER'
